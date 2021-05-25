@@ -32,4 +32,4 @@ const startGame = () => {
   }
 };
 // cards randomized on start
-window.onload = startGame();
+window.onload = startGame(); 
