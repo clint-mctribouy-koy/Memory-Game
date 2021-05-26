@@ -59,8 +59,11 @@ body {
 }
 
 .match {
-  transform: rotateY(180deg);
-  background-color: green;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  transform: rotateY(270deg);
+  background: green;
+  backface-visibility: hidden;
+
+  // width: 100%;
+  // height: 100%;
 }
