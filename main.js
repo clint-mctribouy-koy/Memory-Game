@@ -2,27 +2,22 @@
 let firstFlippedCard = [];
 const deckGrid = document.querySelector(".memory-game-grid");
 const cards = document.querySelectorAll(".memory-card");
-// Flipping card on click and adding event listener on to each card
-const getPairs = (card) => {
-  if (firstFlippedCard.length === 2)
-    //=== 0) {
-    console.log(firstFlippedCard[0].dataset.card);
-  console.log(firstFlippedCard[firstFlippedCard.length - 1].dataset.card);
-  if (firstFlippedCard[0].dataset.card == firstFlippedCard[1].dataset.card) {
-    // card.classList.add("match");
-    // console.log("match");
-    matched();
-  } else {
-    // setTimeout(() => {
-    //   card.classList.remove("flip");
-    //   firstFlippedCard[0].classList.remove("flip");
-    //   console.log("not-match");
-    // }, 1500);
-    unmatched();
-  }
-};
-//};
+const scoreCard = document.querySelector("#score");
+let score = 0;
 
+// Flipping card on click and adding event listener on to each card
+const getPairs = () => {
+  if (firstFlippedCard.length === 2)
+    if (firstFlippedCard[0].dataset.card == firstFlippedCard[1].dataset.card) {
+      matched();
+      score++;
+      document.querySelector("#score").textContent = `score: ${score}`;
+    } else {
+      unmatched();
+    }
+};
+
+// if the cards are macthed
 const matched = () => {
   firstFlippedCard[0].classList.add("match");
   firstFlippedCard[1].classList.add("match");
@@ -30,13 +25,14 @@ const matched = () => {
   firstFlippedCard = [];
 };
 
+// function if the cards arent macthed together
 const unmatched = () => {
   setTimeout(() => {
     firstFlippedCard[0].classList.remove("flip");
     firstFlippedCard[1].classList.remove("flip");
     console.log("not-match");
     firstFlippedCard = [];
-  }, 1500);
+  }, 1000);
 };
 
 cards.forEach((card) => {
@@ -48,21 +44,15 @@ cards.forEach((card) => {
   });
 });
 
-// store in variable first card
-
-// matching cards
-// Card Array to compare the flipped cards
-// const flippedCardsArray = [];
-
 const cardDeck = [...cards];
 // Shuffling cards and randomizing placement
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     // x is the randomised array that we want to now make equal to the original array
-    let x = Math.floor(Math.random() * i);
+    let j = Math.floor(Math.random() * i);
     let temp = array[i];
-    array[i] = array[x];
-    array[x] = temp;
+    array[i] = array[j];
+    array[j] = temp;
   }
   return array;
 };
@@ -74,6 +64,10 @@ const startGame = () => {
       deckGrid.appendChild(card);
     });
   }
-};
 
+  scoreCard.innerHTML = `score: ${score}`;
+};
+// start game on page load
 window.onload = startGame();
+
+//score
