@@ -17,7 +17,6 @@ const getPairs = () => {
     }
 
   if (score === 6) {
-    // alert("you win my niggah");
     congratulations();
   }
 };
@@ -28,7 +27,7 @@ const matched = () => {
   firstFlippedCard[1].classList.add("match", "neonMatch");
   firstFlippedCard[0].classList.remove("flip", "back-face");
   firstFlippedCard[1].classList.remove("flip", "back-face");
-  console.log(firstFlippedCard[0], firstFlippedCard[1]);
+  console.log("match");
   firstFlippedCard = [];
 };
 
