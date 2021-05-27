@@ -16,7 +16,7 @@ const getPairs = () => {
       unmatched();
     }
 
-  if (score === 4) {
+  if (score === 6) {
     // alert("you win my niggah");
     congratulations();
   }
@@ -24,17 +24,21 @@ const getPairs = () => {
 
 // if the cards are macthed
 const matched = () => {
-  firstFlippedCard[0].classList.add("match");
-  firstFlippedCard[1].classList.add("match");
-  console.log("match");
+  firstFlippedCard[0].classList.add("match", "neonMatch");
+  firstFlippedCard[1].classList.add("match", "neonMatch");
+  firstFlippedCard[0].classList.remove("flip", "back-face");
+  firstFlippedCard[1].classList.remove("flip", "back-face");
+  console.log(firstFlippedCard[0], firstFlippedCard[1]);
   firstFlippedCard = [];
 };
 
 // function if the cards arent macthed together
 const unmatched = () => {
+  firstFlippedCard[0].classList.add("neonUnMatch");
+  firstFlippedCard[1].classList.add("neonUnMatch");
   setTimeout(() => {
-    firstFlippedCard[0].classList.remove("flip");
-    firstFlippedCard[1].classList.remove("flip");
+    firstFlippedCard[0].classList.remove("flip", "back-face", "neonUnMatch");
+    firstFlippedCard[1].classList.remove("flip", "back-face", "neonUnMatch");
     console.log("not-match");
     firstFlippedCard = [];
   }, 1000);
@@ -99,15 +103,13 @@ const modal = document.getElementById("myModal");
 // let finalTime;
 const finalTime = document.querySelector(".final-time");
 const congratulations = () => {
-  if (score === 4) {
+  if (score === 6) {
     clearInterval(interval);
     finalTime.innerHTML = timer.innerHTML;
     modal.classList.add("modal-content");
     // modal.classList.add("modal-content");
   }
 };
-
-
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {

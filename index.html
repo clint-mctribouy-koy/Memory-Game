@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
     />
     <script
       src="https://kit.fontawesome.com/02608b8a6c.js"
@@ -18,34 +18,43 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <title>Memory Game</title>
   </head>
-  <body>
+  <body class="bg-dark">
     <ul class="animation-container">
       <li><i class="far fa-circle"></i></li>
       <li><i class="far fa-square"></i></li>
       <li><i class="fas fa-plus"></i></li>
-      <li><span class="iconify" data-icon="ion:triangle-outline" data-inline="false"></span></li>
+      <li>
+        <span
+          class="iconify"
+          data-icon="ion:triangle-outline"
+          data-inline="false"
+        ></span>
+      </li>
       <li><i class="far fa-circle"></i></li>
       <li><i class="far fa-square"></i></li>
       <li><i class="fas fa-plus"></i></li>
-      <li><span class="iconify" data-icon="ion:triangle-outline" data-inline="false"></span></li>
+      <li>
+        <span
+          class="iconify"
+          data-icon="ion:triangle-outline"
+          data-inline="false"
+        ></span>
+      </li>
       <li><i class="far fa-circle"></i></li>
       <li><i class="far fa-square"></i></li>
-      
     </ul>
     <header>
       <h1 id="game-title">Memory Game</h1>
-      
+
       <div id="timer"></div>
       <div id="score"></div>
     </header>
 
-    
-    <div id="myModal" class="modal">
-     
-      <div class="modal-content">
+    <div id="myModal" class="modal bg-dark">
+      <div class="modal-content bg-dark">
         <span class="close">&times;</span>
         <p>Well Done!!</p>
-        <button id="restart-button" onclick="location.reload()">
+        <button type="button" id="restart-button"  class="dark btn-lg"onclick="location.reload()">
           Play Again
         </button>
         <div class="final-time">Final Time:</div>
@@ -53,56 +62,84 @@
     </div>
     <section class="memory-game-grid">
       <div class="memory-card" data-card="one">
-        <div class="front-face">1</div>
+        <div class="front-face neonText">1</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card two" data-card="two">
-        <div class="front-face">2</div>
+        <div class="front-face neonText">2</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card" data-card="three">
-        <div class="front-face">3</div>
+        <div class="front-face neonText">3</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card" data-card="one">
-        <div class="front-face">1</div>
+        <div class="front-face neonText">1</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card two" data-card="two">
-        <div class="front-face">2</div>
+        <div class="front-face neonText">2</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card" data-card="three">
-        <div class="front-face">3</div>
+        <div class="front-face neonText">3</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card" data-card="four">
-        <div class="front-face">4</div>
+        <div class="front-face neonText">4</div>
+        <div class="back-face">
+          <i class="fas fa-arrow-alt-circle-down"></i>
+        </div>
+      </div>
+
+      <div class="memory-card" data-card="five">
+        <div class="front-face neonText">5</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
       </div>
 
       <div class="memory-card" data-card="four">
-        <div class="front-face">4</div>
+        <div class="front-face neonText">4</div>
+        <div class="back-face">
+          <i class="fas fa-arrow-alt-circle-down"></i>
+        </div>
+      </div>
+
+      <div class="memory-card" data-card="five">
+        <div class="front-face neonText">5</div>
+        <div class="back-face">
+          <i class="fas fa-arrow-alt-circle-down"></i>
+        </div>
+      </div>
+
+      <div class="memory-card" data-card="six">
+        <div class="front-face neonText">6</div>
+        <div class="back-face">
+          <i class="fas fa-arrow-alt-circle-down"></i>
+        </div>
+      </div>
+
+      <div class="memory-card" data-card="six">
+        <div class="front-face neonText">6</div>
         <div class="back-face">
           <i class="fas fa-arrow-alt-circle-down"></i>
         </div>
