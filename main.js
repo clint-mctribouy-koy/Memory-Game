@@ -5,7 +5,7 @@ const cards = document.querySelectorAll(".memory-card");
 const scoreCard = document.querySelector("#score");
 let score = 0;
 
-// Flipping card on click and adding event listener on to each card
+// checking if the pairs are matched then add on to score if not return to unflipped state 
 const getPairs = () => {
   if (firstFlippedCard.length === 2)
     if (firstFlippedCard[0].dataset.card == firstFlippedCard[1].dataset.card) {
@@ -34,7 +34,7 @@ const unmatched = () => {
     firstFlippedCard = [];
   }, 1000);
 };
-
+// Flipping card on click and adding event listener on to each card
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     // console.log(card);
