@@ -5,7 +5,7 @@ const cards = document.querySelectorAll(".memory-card");
 const scoreCard = document.querySelector("#score");
 let score = 0;
 
-// checking if the pairs are matched then add on to score if not return to unflipped state 
+// checking if the pairs are matched then add on to score if not return to unflipped state
 const getPairs = () => {
   if (firstFlippedCard.length === 2)
     if (firstFlippedCard[0].dataset.card == firstFlippedCard[1].dataset.card) {
@@ -15,6 +15,10 @@ const getPairs = () => {
     } else {
       unmatched();
     }
+
+  if (score === 4) {
+    alert("you win my niggah");
+  }
 };
 
 // if the cards are macthed
@@ -56,6 +60,22 @@ const shuffle = (array) => {
   }
   return array;
 };
+//just creating a young timer -> run the timer on game start -> if the score reaches the full amount of pairs stop timer -> maybe create a pop up saying well done or something?
+let second = 0;
+let minute = 0;
+let interval;
+const timer = document.querySelector("#timer");
+const startTimer = () => {
+  interval = setInterval(() => {
+    timer.innerHTML = `timer: ${minute}m : ${second}s`;
+    second++;
+
+    if (second == 60) {
+      minute++;
+      second = 0;
+    }
+  }, 1000);
+};
 // cards randomized on start of game
 const startGame = () => {
   const shuffledCards = shuffle(cardDeck);
@@ -66,8 +86,30 @@ const startGame = () => {
   }
 
   scoreCard.innerHTML = `score: ${score}`;
+  timer.innerHTML = `timer: ${minute}m : ${second}s`;
+  startTimer();
 };
 // start game on page load
 window.onload = startGame();
 
-//score
+// quick modal try then i will refactor
+// Get the modal
+const modal = document.getElementById("myModal");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+
+// When the user clicks on <span> (x), close the modal
+// span.onclick = function () {
+//   modal.style.display = "none";
+// };
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
