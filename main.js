@@ -11,13 +11,14 @@ const getPairs = () => {
     if (firstFlippedCard[0].dataset.card == firstFlippedCard[1].dataset.card) {
       matched();
       score++;
-      document.querySelector("#score").textContent = `score: ${score}`;
+      document.querySelector("#score").textContent = `Score: ${score}`;
     } else {
       unmatched();
     }
 
   if (score === 4) {
-    alert("you win my niggah");
+    // alert("you win my niggah");
+    congratulations();
   }
 };
 
@@ -67,7 +68,7 @@ let interval;
 const timer = document.querySelector("#timer");
 const startTimer = () => {
   interval = setInterval(() => {
-    timer.innerHTML = `timer: ${minute}m : ${second}s`;
+    timer.innerHTML = `Time: ${minute}m : ${second}s`;
     second++;
 
     if (second == 60) {
@@ -85,8 +86,8 @@ const startGame = () => {
     });
   }
 
-  scoreCard.innerHTML = `score: ${score}`;
-  timer.innerHTML = `timer: ${minute}m : ${second}s`;
+  scoreCard.innerHTML = `Score: ${score}`;
+  timer.innerHTML = `Time: ${minute}m : ${second}s`;
   startTimer();
 };
 // start game on page load
@@ -95,10 +96,20 @@ window.onload = startGame();
 // quick modal try then i will refactor
 // Get the modal
 const modal = document.getElementById("myModal");
+// let finalTime;
+const finalTime = document.querySelector(".final-time");
+const congratulations = () => {
+  if (score === 4) {
+    clearInterval(interval);
+    finalTime.innerHTML = timer.innerHTML;
+    modal.classList.add("modal-content");
+    // modal.classList.add("modal-content");
+  }
+};
 
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 
