@@ -325,3 +325,21 @@ header {
     margin-top: 50%;
   }
 }
+@media (max-width: 414px) {
+  body {
+    height: 25%;
+    width: 25%;
+  }
+
+  .memory-card {
+    width: 65px;
+    height: 105px;
+  }
+
+  .memory-game-grid {
+    width: 20%;
+    height: 25%;
+    margin-left: 40px;
+    margin-top: 50%;
+  }
+}

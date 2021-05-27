@@ -290,7 +290,7 @@ header {
   // 0 0 151px rgb(214, 63, 43);
 }
 
-// media queries
+// media querie -> media query the titles as well please
 @media (max-width: 320px) {
   body {
     height: 15%;
@@ -345,6 +345,24 @@ header {
 } ;
 
 @media (max-width: 411px) {
+  body {
+    height: 25%;
+    width: 25%;
+  }
+  .memory-card {
+    width: 65px;
+    height: 105px;
+  }
+  .memory-game-grid {
+    width: 20%;
+    height: 25%;
+    margin-left: 40px;
+    // padding-right: 100px;
+    margin-top: 50%;
+  }
+} ;
+
+@media (max-width: 414px) {
   body {
     height: 25%;
     width: 25%;
