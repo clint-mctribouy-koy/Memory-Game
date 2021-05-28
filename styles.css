@@ -64,25 +64,31 @@ i {
   transform: rotateY(180deg);
 }
 
-button {
-  border: 1px solid black;
-  width: 90px;
-  height: 50px;
-  border-radius: 25%;
-  display: flex;
-  margin-right: 100px;
+.fa-redo-alt {
+  font-size: 15px;
+  padding-top: 10px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff;
+}
+
+.fa-check-circle {
+  font-size: 35px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
   padding: 20px;
   border: 1px solid #888;
   z-index: 1;
   /* Sit on top */
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  height: 50%;
   text-align: center;
+}
+.modal-content p {
+  padding-top: 10px;
 }
 
 #myModal {
@@ -115,6 +121,14 @@ header {
   margin-left: 90px;
   width: 160px;
   padding-left: 100px;
+}
+
+.refresh {
+  grid-row: 2/2;
+  grid-column: -3/-2;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
 }
 
 #timer {
