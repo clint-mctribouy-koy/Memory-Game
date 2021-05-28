@@ -60,6 +60,18 @@ i {
   font-size: 40px;
 }
 
+a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #8c00ff, 0 0 42px #a200ff;
+  text-decoration: none;
+  color: #fff;
+}
+
 .flip {
   transform: rotateY(180deg);
 }
@@ -74,7 +86,7 @@ i {
 .fa-check-circle {
   font-size: 35px;
   color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa;
 }
 
 /* Modal Content/Box */
