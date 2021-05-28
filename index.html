@@ -16,6 +16,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap"
+      rel="stylesheet"
+    />
     <title>Memory Game</title>
   </head>
   <body class="bg-dark">
@@ -48,21 +53,17 @@
 
       <div id="timer"></div>
       <div id="score"></div>
+      <!-- <div class="refresh">
+        <a href=""><i class="fas fa-redo-alt"></i> </a>
+      </div> -->
     </header>
 
     <div id="myModal" class="modal bg-dark">
       <div class="modal-content bg-dark">
-        <span class="close">&times;</span>
+        <i class="far fa-check-circle"></i>
         <p>Well Done!!</p>
-        <!-- <button
-          type="button"
-          id="restart-button"
-          class="dark"
-          onclick="location.reload()"
-        >
-          Play Again
-        </button> -->
         <div class="final-time">Final Time:</div>
+        <a href=""><i class="fas fa-redo-alt"></i> </a>
       </div>
     </div>
     <section class="memory-game-grid">
