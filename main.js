@@ -104,7 +104,7 @@ const finalTime = document.querySelector(".final-time");
 const congratulations = () => {
   if (score === 6) {
     clearInterval(interval);
-    finalTime.innerHTML = timer.innerHTML;
+    finalTime.innerHTML = `You got all pairs in - ${timer.innerHTML}`;
     modal.classList.add("modal-content");
     // modal.classList.add("modal-content");
   }

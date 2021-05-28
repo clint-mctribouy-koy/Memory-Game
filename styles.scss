@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   color: #f1f1f1;
+
   // font-family: 'The Rave Is In Your Pants ';
 }
 
@@ -71,6 +72,17 @@ i {
   font-size: 40px;
 }
 
+a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px rgb(140, 0, 255), 0 0 42px rgb(162, 0, 255);
+  text-decoration: none;
+  color: #fff;
+}
+
 // card classes on flip, match, and unmatch
 .flip {
   transform: rotateY(180deg);
@@ -88,7 +100,7 @@ i {
 .fa-check-circle {
   font-size: 35px;
   color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa;
 }
 /* Modal Content/Box */
 .modal-content {
@@ -126,8 +138,6 @@ header {
   grid-gap: -1px;
   //   font-family: "Ruslan Display
   // ";
-    // font-family: "Ruslan Display";
-
 }
 #game-title {
   grid-column: 2/2;
