@@ -3,6 +3,9 @@ let firstFlippedCard = [];
 const deckGrid = document.querySelector(".memory-game-grid");
 const cards = document.querySelectorAll(".memory-card");
 const scoreCard = document.querySelector("#score");
+const moves = document.querySelector("#moves");
+const starsList = document.querySelector(".stars");
+let movesCounter = 0;
 let score = 0;
 
 // checking if the pairs are matched then add on to score if not return to unflipped state
@@ -11,7 +14,7 @@ const getPairs = () => {
     if (firstFlippedCard[0].dataset.card == firstFlippedCard[1].dataset.card) {
       matched();
       score++;
-      document.querySelector("#score").textContent = `Score: ${score}`;
+      document.querySelector("#score").textContent = `Pairs: ${score}`;
     } else {
       unmatched();
     }
@@ -49,6 +52,9 @@ cards.forEach((card) => {
     card.classList.add("flip");
     firstFlippedCard.push(card);
     getPairs(card);
+    // Add moves to the counter
+    getMovesCounter();
+    starRating();
   });
 });
 
@@ -88,8 +94,8 @@ const startGame = () => {
       deckGrid.appendChild(card);
     });
   }
-
-  scoreCard.innerHTML = `Score: ${score}`;
+  moves.innerHTML = `Moves: ${movesCounter}`;
+  scoreCard.innerHTML = `Pairs: ${score}`;
   timer.innerHTML = `Time: ${minute}m : ${second}s`;
   startTimer();
 };
@@ -101,10 +107,12 @@ window.onload = startGame();
 const modal = document.getElementById("myModal");
 // let finalTime;
 const finalTime = document.querySelector(".final-time");
+const trophieRating = document.querySelector(".trophie-rating")
 const congratulations = () => {
   if (score === 6) {
     clearInterval(interval);
-    finalTime.innerHTML = `You got all pairs in - ${timer.innerHTML}`;
+    finalTime.innerHTML = `You got all pairs in ${moves.innerHTML} in ${timer.innerHTML}!`;
+    trophieRating.innerHTML = `Trophie Rating: ${starsList.innerHTML} `;
     modal.classList.add("modal-content");
     // modal.classList.add("modal-content");
   }
@@ -114,5 +122,28 @@ const congratulations = () => {
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+};
+
+// trying to make a moves and star rating
+const getMovesCounter = () => {
+  movesCounter++;
+  moves.innerHTML = `Moves: ${movesCounter}`;
+};
+const starRating = () => {
+  if (movesCounter > 20 && movesCounter < 39) {
+    for (let i = 0; i < 3; i++) {
+      // console.log(starsList);
+      if (i > 1) {
+        starsList.removeChild(starsList.firstChild);
+      }
+    }
+  }else if (movesCounter > 40) {
+    for (let i = 0; i < 3; i++) {
+      // console.log(starsList);
+      if (i > 0) {
+        starsList.removeChild(starsList.firstChild);
+      }
+    }
   }
 };
