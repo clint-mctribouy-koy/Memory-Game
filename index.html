@@ -49,13 +49,15 @@
       <li><i class="far fa-square"></i></li>
     </ul>
     <header>
-      <h1 id="game-title">Memory Game</h1>
-
-      <div id="timer"></div>
-      <div id="score"></div>
-      <!-- <div class="refresh">
-        <a href=""><i class="fas fa-redo-alt"></i> </a>
-      </div> -->
+      <div class="game__header">
+        <h1 id="game-title">Memory Game</h1>
+        <div class="game__information">
+          <div id="score"></div>
+          <div id="timer"></div>
+          <a href=""><i class="fas fa-redo-alt" id="reset"></i> </a>
+        </div>
+        <!-- <div class="refresh"> -->
+      </div>
     </header>
 
     <div id="myModal" class="modal bg-dark">
@@ -66,94 +68,96 @@
         <a href=""><i class="fas fa-redo-alt"></i> Play Again!</a>
       </div>
     </div>
-    <section class="memory-game-grid">
-      <div class="memory-card" data-card="one">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-arrow-alt-circle-down"></i>
+    <main>
+      <section class="memory-game-grid">
+        <div class="memory-card" data-card="one">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-arrow-alt-circle-down"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card two" data-card="two">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-arrow-alt-circle-up"></i>
+        <div class="memory-card two" data-card="two">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-arrow-alt-circle-up"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="three">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-times"></i>
+        <div class="memory-card" data-card="three">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-times"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="one">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-arrow-alt-circle-down"></i>
+        <div class="memory-card" data-card="one">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-arrow-alt-circle-down"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card two" data-card="two">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-arrow-alt-circle-up"></i>
+        <div class="memory-card two" data-card="two">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-arrow-alt-circle-up"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="three">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-times"></i>
+        <div class="memory-card" data-card="three">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-times"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="four">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-arrow-alt-circle-right"></i>
+        <div class="memory-card" data-card="four">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="five">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <!-- <i class="fas fa-arrow-alt-circle-down"></i> -->
-          <i class="far fa-circle"></i>
+        <div class="memory-card" data-card="five">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <!-- <i class="fas fa-arrow-alt-circle-down"></i> -->
+            <i class="far fa-circle"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="four">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="fas fa-arrow-alt-circle-right"></i>
+        <div class="memory-card" data-card="four">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="five">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <i class="far fa-circle"></i>
+        <div class="memory-card" data-card="five">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <i class="far fa-circle"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="six">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <!-- <i class="fas fa-arrow-alt-circle-down"></i> -->
-          <i class="far fa-square"></i>
+        <div class="memory-card" data-card="six">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <!-- <i class="fas fa-arrow-alt-circle-down"></i> -->
+            <i class="far fa-square"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="memory-card" data-card="six">
-        <div class="front-face neonText"></div>
-        <div class="back-face">
-          <!-- <i class="fas fa-arrow-alt-circle-down"></i> -->
-          <i class="far fa-square"></i>
+        <div class="memory-card" data-card="six">
+          <div class="front-face neonText"></div>
+          <div class="back-face">
+            <!-- <i class="fas fa-arrow-alt-circle-down"></i> -->
+            <i class="far fa-square"></i>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   </body>
   <script src="./main.js"></script>
 </html>
