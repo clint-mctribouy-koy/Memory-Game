@@ -36,6 +36,7 @@ header {
 #game-title {
   display: flex;
   justify-content: center;
+  padding-left: 25px;
 }
 
 .memory-game-grid {
