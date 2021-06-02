@@ -252,8 +252,6 @@ a:hover,
 }
 
 .match {
-  width: 90px;
-  height: 130px;
   text-align: center;
   backface-visibility: hidden;
   transform: rotateY(180deg);
