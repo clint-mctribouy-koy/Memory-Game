@@ -33,6 +33,11 @@ header {
   justify-content: center;
 }
 
+#game-title {
+  display: flex;
+  justify-content: center;
+}
+
 .memory-game-grid {
   margin-top: 50px;
   display: grid;
@@ -123,6 +128,9 @@ a:hover,
   width: 40%;
   height: 50%;
   text-align: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
 }
 .modal-content p {
   padding-top: 10px;
@@ -268,6 +276,10 @@ a:hover,
   text-shadow: 0 0 10px #fff, 0 0 42px #d63f2b, 0 0 82px #d63f2b;
 }
 
+#moves {
+  padding-right: 15px;
+}
+
 @media (min-width: 768px) {
   header {
     font-size: 25px;
@@ -281,4 +293,24 @@ a:hover,
     width: 100px;
     height: 140px;
   }
+}
+.fa-trophy {
+  font-size: 25px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #e6a630, 0 0 42px #e6a630;
+  padding-left: 10px;
+}
+
+.stars {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.trophie-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

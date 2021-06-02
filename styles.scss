@@ -29,6 +29,10 @@ header {
   align-items: center;
   justify-content: center;
 }
+#game-title {
+  display: flex;
+  justify-content: center;
+}
 
 .memory-game-grid {
   margin-top: 50px;
@@ -120,6 +124,10 @@ a:hover,
   width: 40%;
   height: 50%;
   text-align: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
   p {
     padding-top: 10px;
   }
@@ -269,6 +277,10 @@ a:hover,
     0 0 82px rgb(214, 63, 43);
 }
 
+#moves {
+  padding-right: 15px;
+}
+
 // // media querie -> media query the titles as well please
 
 @media (min-width: 768px) {
@@ -282,4 +294,26 @@ a:hover,
     width: 100px;
     height: 140px;
   }
+}
+
+// star rating
+.fa-trophy {
+  font-size: 25px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px rgb(230, 166, 48),
+    0 0 42px rgb(230, 166, 48);
+  padding-left: 10px;
+}
+
+.stars {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.trophie-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
